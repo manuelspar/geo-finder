@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "GeoPhoto Location Finder",
+    "version": "1.0",
+    "description": "Extract and display GeoPhoto coordinates and location.",
+    "permissions": ["activeTab", "scripting"],
+    "host_permissions": ["https://*/*"],
+    "content_scripts": [
+      {
+        "matches": ["https://*/*"],
+        "js": ["contentScript.js"]
+      }
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_title": "GeoPhoto Finder"
+    }
+  }
+  
